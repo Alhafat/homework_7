@@ -6,45 +6,41 @@
 // 8 7,8 -7,1 9
 
 
-int[,] GetArray()
+double[,] GetArray(int m, int n)
 {
-    System.Console.WriteLine("Введите количество строк массива: ");
-    int m = int.Parse(Console.ReadLine()!);
-    System.Console.WriteLine("Введите количество столбцов массива: ");
-    int n = int.Parse(Console.ReadLine()!);
-    int[,] array = new int[m, n];
-    // Random rand = new Random();
+    double[,] array = new double[m, n];
+    Random rand = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(int.MinValue, int.MaxValue);
+            array[i, j] = rand.Next(-100, 100) + rand.NextDouble();
         }
     }
     return array;
 }
 
-int[,] PrinArray(int[,] numbers)
+void PrintArray(double[,] numbers)
 {
     for (int i = 0; i < numbers.GetLength(0); i++)
     {
         for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            if (numbers[i, j] >= 0) Console.Write(" " + numbers[i, j] + " \t");
-            else Console.Write(numbers[i, j] + " " + " \t");
+            if (numbers[i, j] >= 0) Console.Write(" " + $"{numbers[i, j]}" + "\t");
+            else Console.Write($"{numbers[i, j]}" + " \t");
         }
         Console.WriteLine();
     }
-    return numbers;
 }
 
+void Main()
+{
+    System.Console.WriteLine("Введите количество строк массива: ");
+    int m = int.Parse(Console.ReadLine()!);
+    System.Console.WriteLine("Введите количество столбцов массива: ");
+    int n = int.Parse(Console.ReadLine()!);
+    double[,] numbers = GetArray(m, n);
+    PrintArray(numbers);
+}
 
-// void Main()
-// {
-//     int[,] numbers = GetArray();
-//     PrinArray(numbers);
-// }
-int[,] numbers = GetArray();
-PrinArray(numbers);
-
-// Main();
+Main();
