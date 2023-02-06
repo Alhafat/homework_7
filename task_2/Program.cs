@@ -16,7 +16,7 @@ int[,] GetArray()
     // System.Console.WriteLine("Введите количество столбцов массива: ");
     // int n = int.Parse(Console.ReadLine()!);
     // int[,] array = new int[m, n];
-    int[,] array = new int[new Random().Next(0, int.MaxValue/10000),new Random().Next(0, int.MaxValue/100000)];
+    int[,] array = new int[new Random().Next(0, int.MaxValue/10000),new Random().Next(0, int.MaxValue/10000)];
     Random rand = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
