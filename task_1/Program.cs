@@ -26,8 +26,8 @@ void PrintArray(double[,] numbers)
     {
         for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            if (numbers[i, j] >= 0) Console.Write(" " + $"{numbers[i, j]}" + "\t");
-            else Console.Write($"{numbers[i, j]}" + " \t");
+            if (numbers[i, j] >= 0) Console.Write(" " + $"{numbers[i, j]:F2}" + "\t");
+            else Console.Write($"{numbers[i, j]:F2}" + " \t");
         }
         Console.WriteLine();
     }
