@@ -52,14 +52,13 @@ void Main()
 {
     int[,] numbers = GetArray();
     
-    System.Console.WriteLine("Количество строк массива:" + numbers.GetLength(0));
-    System.Console.WriteLine("Количество столбцов массива:" + numbers.GetLength(1));
-    
+    System.Console.WriteLine("Количество строк массива:" + numbers.GetLength(0));  
     System.Console.WriteLine("Введите искомую позицию строки массива: ");
     int row = int.Parse(Console.ReadLine()!);
+    System.Console.WriteLine("Количество столбцов массива:" + numbers.GetLength(1));
     System.Console.WriteLine("Введите искомую позицию столбца массива: ");
     int line = int.Parse(Console.ReadLine()!);
-    // Console.WriteLine();                             //не включать при работе с рандомной сборкой
+    // Console.WriteLine();                             
     // PrintArray(numbers);                             //не включать при работе с рандомной сборкой
     Console.WriteLine();
     FindNumberInArray(numbers, row, line);
