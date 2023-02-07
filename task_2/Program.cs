@@ -59,7 +59,7 @@ void Main()
     System.Console.WriteLine("Введите искомую позицию столбца массива: ");
     int line = int.Parse(Console.ReadLine()!);
     // Console.WriteLine();                             
-    // PrintArray(numbers);                             //не включать при работе с рандомной сборкой
+    PrintArray(numbers);                             //не включать при работе с рандомной сборкой
     Console.WriteLine();
     FindNumberInArray(numbers, row, line);
 }
